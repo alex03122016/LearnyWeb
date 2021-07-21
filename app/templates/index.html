@@ -5,22 +5,23 @@
 	<div align="center"> Geben Sie hier den Text ein. </div>
 	<div align="center">
 		<form method="POST">
-		    <textarea name="text" cols="60" rows="10"> ...</textarea>
+        {{ form.textinput(cols="60", rows="10" ) }}
 			<p>
             <hr>
-				<input type="radio" name="language_options" id="Sprache: Deutsch" value="Sprache: Deutsch" checked="checked"> deutsch </input>
-				<input type="radio" name="language_options" id="Sprache: Englisch" value="Sprache: Englisch"> englisch </input>
-            <br>
-            <hr>
+
+
             </p>
-
-
-			<p><input class="button" type=submit value=enviar!>
-
+        <p>
+          {{ form.clozetest_btn(class_="button") }}
+          {{ form.wordsearch_btn(class_="button") }}
+          {{ form.presentOrPast_btn(class_="button") }}
+          {{ form.syllables_btn(class_="button") }}
+          {{ form.infinitive_btn(class_="button") }}
+        </p>
 			</p>
-
 		</form>
-	</div>
+    {{ help}}
 
+	</div>
     </body>
 {% endblock %}
