@@ -31,7 +31,7 @@ def file_downloads():
 @app.route('/', methods=['GET', 'POST'])
 def my_form_post():
 	#text = request.form['text']
-	language = request.form['language_options']
+	language = "Sprache: Deutsch"
 	form = LearnyWebForm()
 	text = form.textinput.data
 	print('clozestes', form.clozetest_btn.data)
