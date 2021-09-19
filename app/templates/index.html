@@ -6,22 +6,58 @@
 	<div align="center">
 		<form method="POST">
         {{ form.textinput(cols="60", rows="10" ) }}
-			<p>
+		<p>
             <hr>
+    </p>
+    <p>
+
+          <div class="tooltip">
+            {{ form.clozetest_btn(  class_="button") }}
+            <span class="tooltiptext">
+              Aus einigen Nomen im Text wird ein Lückentext erstellt.
+            </span>
+          </div>
+
+          <div class="tooltip">
+            {{ form.wordsearch_btn( class_="button") }}
+            <span class="tooltiptext">
+              Aus einigen Nomen im Text wird ein Suchsel erstellt.
+            </span>
+          </div>
+
+          <div class="tooltip">
+            {{ form.presentOrPast_btn(class_="button") }}
+          <span class="tooltiptext">
+              In der erstellten Aufgabe muss entschieden
+              werden, ob das Wort im Präteritum oder im Präsens konjugiert ist.
+              Bei einigen unregelmäßigen Verben kann es zu Fehlern kommen.
+              Aus "fahre" wird z.B. "fahrte" anstatt "fuhr".
+          </span>
+          </div>
+
+          <div class="tooltip">
+            {{ form.syllables_btn(class_="button") }}
+            <span class="tooltiptext">
+                Aus Verben im Text werden Silben aufgeführt, die richtig geordnet
+                werden müssen.
+            </span>
+            </div>
+
+          <div class="tooltip">
+            {{ form.infinitive_btn( class_="button") }}
+            <span class="tooltiptext">
+              Aus einem Text werden konjugierte und infinitive Verben aufgeführt,
+              die einander zugeordnet werden müssen.
+            </span>
+          </div>
 
 
-            </p>
-        <p>
-          {{ form.clozetest_btn(class_="button") }}
-          {{ form.wordsearch_btn(class_="button") }}
-          {{ form.presentOrPast_btn(class_="button") }}
-          {{ form.syllables_btn(class_="button") }}
-          {{ form.infinitive_btn(class_="button") }}
-        </p>
+    </p>
 			</p>
 		</form>
+    <p>
     {{ help}}
-
+    <p>
 	</div>
     </body>
 {% endblock %}

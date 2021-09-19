@@ -1,8 +1,9 @@
 learnY
 ===============================================================================
-Learny returns worksheets for learning. ﻿Learny uses the wordmaterial of your
-text input. It is aimed at people who have problems with basic aspects of the
-language and therefore difficulties to anderstand texts.
+Learny returns excercices for learning in format ".docx". ﻿Learny uses words of
+your text input. It is aimed at people who have problems with basic aspects of
+the language and therefore difficulties to understand texts. It could be used to
+prepare the reading of a text.
 
 source code and usage docs: https://github.com/alex03122016/learny
 
@@ -11,22 +12,30 @@ Installation
 set up flask server in Linux
 
 $ git clone https://github.com/alex03122016/learny
-$ virtualenv -p /usr/bin/python3.6 flask_venv
-$ pip install -r /home/alex/learny/learny/microblog/requirements-flask.txt
+$ virtualvenv -p python3.8 venv
+$ pip install -r /requirements-flask.txt
 $ python -m spacy download de_core_news_sm
-$ Source flask_venv/bin/activate
-$ cd learny
-$ cd microblog
-$ flask run –host=0.0.0.0
+$ . venv/bin/activate
+$ flask run --host=0.0.0.0
 
-for pyhyphen maybe needs to be installed on ubuntu 20.04
-sudo apt-get install build-essential python-dev
+If the requirements.txt File does#t work:
+pip install python-docx;
+pip install pyhyphen;
+#on ubuntu 20.04 for pyhyphen maybe needs to be installed
+#sudo apt-get install build-essential python-dev
+#or:
+#sudo apt install python3-dev
+
+pip install -U pip setuptools wheel;
+pip install -U spacy;
+python -m spacy download de_core_news_sm;
+pip install textblob-de;
 
 Usage
 -------------------------------------------------------------------------------
 
 You can enter a small text (200 words) into the textbox. After that you can
-click on "submit" - Button. Finally you have to click on "Download" - Button.
+click on "submit" - Button.
 
 Example input text in german:
 "Die ersten bekannten Ritter gab es schon im Römischen Reich, noch vor Christi
@@ -43,19 +52,24 @@ Bedeutung: Das lateinische Wort "eques" heißt wörtlich Reiter, das Wort "equus
 Index of the output docx file
 -------------------------------------------------------------------------------
 
-page 1: 	- It hides nouns in a wordsearch.
+Suchsel: 	- It hides nouns in a wordsearch.
 					- competence: spelling
-page 3: 	- It hides nouns in a cloze test. It substitutes every letter with an
+Lückentext:
+          - It hides nouns in a cloze test. It substitutes every letter with an
 						underscore symbol "_".
 					- competence: spelling, context of use
-page 8: 	- It gives you verbs in infinite form and finit form. You have to bring
+Infinitiv:
+ 	        - It gives you verbs in infinite form and finit form. You have to bring
 						them together.
 					- competence:  verb conjugation, infinitive
-page 9:		- It changes the order letters of nouns.
+Buchstabensalat: (currently off)
+		      - It changes the order of letters of nouns.
 					- competence: spelling
-page 10: 	- It changes the order of hyphens of nouns.
+Silbensalat: (currently off)
+ 	        - It changes the order of hyphens of nouns.
 					- competence spelling, word separation,
-page 11: 	- It gives you verbs in first person present tense and first person past
+Zeitformen:
+ 	        - It gives you verbs in first person present tense and first person past
 						tense
 					- competence:  verb conjugation, tense
 
