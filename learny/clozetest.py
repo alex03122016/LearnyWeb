@@ -68,4 +68,5 @@ def cloze_test(inputtext, language):
 
 
 	doc.save(save_path)
-	return export_some_nouns
+	print("export_some_nouns", export_some_nouns)
+	return export_some_nouns, noun_list

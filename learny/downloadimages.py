@@ -1,4 +1,8 @@
 
+#sudo apt-get install libcurl4-gnutls-dev
+#pip install pycurl
+#pip install wptools
+
 def prepare_search(inputtext, language):
 	import spacy #code: pip install spacy
 	try:
@@ -70,3 +74,5 @@ for word in list1:
 	except:
 			print(f"Error!! Couldn't get result image searching with: {word}")
 			continue
+for word in list1:
+	download_images("Bus")
