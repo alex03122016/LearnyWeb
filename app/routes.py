@@ -1,9 +1,13 @@
 from flask import request, render_template, redirect, url_for, flash
 from app import app
+#from flask_caching import Cache
+#cache = Cache(app,config={'CACHE_TYPE': 'simple'})
+
 import os
 import sys
 from flask import send_file
 from learny import learny, clozetest, colorsyllables, infinitive, PresentOrPast, specialwords, wordsearch
+from learny import shufflesyl
 from app.forms import LearnyWebForm
 from app.help import Help
 
@@ -16,6 +20,9 @@ def index():
 
 @app.route('/', methods=['GET', 'POST'])
 def my_form_post():
+	#cache = Cache()
+	#with app.app_context():
+	#	cache.clear()
 	language = "Sprache: Deutsch"
 	form = LearnyWebForm()
 	text = form.textinput.data
@@ -29,6 +36,8 @@ def my_form_post():
 	if form.syllables_btn.data == True:
 		print("You want syllables")
 		colorsyllables.color_syllables(text)
+		#someNouns, noun_list = clozetest.cloze_test(text, language)
+		#shufflesyl.syl_shuffle(noun_list)
 		download = 'return_syllables'
 
 	#wordsearch_btn

@@ -2,7 +2,7 @@
 try:
 	import colorsyllables, clozetest, wordsearch, mergeDocxModule, PresentOrPast, specialwords, wordshuffle, infinitive, shufflesyl, specialwordsoriginal
 except ImportError:
-	from . import colorsyllables, clozetest, wordsearch, mergeDocxModule, PresentOrPast, specialwords, wordshuffle, infinitive, shufflesyl, specialwordsoriginal
+	from . import colorsyllables, clozetest, wordsearch, mergeDocxModule, PresentOrPast, infinitive
 
 import os
 def learny(inputtext, language):

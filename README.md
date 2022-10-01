@@ -49,7 +49,7 @@ Bedeutung: Das lateinische Wort "eques" heißt wörtlich Reiter, das Wort "equus
  adeligen Krieger auf einem edlen Ross vor - schwer gerüstet und mit Lanze
  bewaffnet."
 
-Index of the output docx file
+Index of the output docx files
 -------------------------------------------------------------------------------
 
 Suchsel: 	- It hides nouns in a wordsearch.
@@ -62,12 +62,10 @@ Infinitiv:
  	        - It gives you verbs in infinite form and finit form. You have to bring
 						them together.
 					- competence:  verb conjugation, infinitive
-Buchstabensalat: (currently off)
-		      - It changes the order of letters of nouns.
-					- competence: spelling
-Silbensalat: (currently off)
- 	        - It changes the order of hyphens of nouns.
-					- competence spelling, word separation,
+
+Silben:
+          - colors every second syllable for reading practice
+          - competence: reading
 Zeitformen:
  	        - It gives you verbs in first person present tense and first person past
 						tense
@@ -77,6 +75,13 @@ Known bugs
 -------------------------------------------------------------------------------
 If you have words that are larger than 20 letters there might result an internal
 server error due to problems with the wordsearch.
+
+todo
+--------------------------------------------------------------------------------
+adapt filename to Buttonname
+infinitiv delete colored text pages
+Silben change description that fits the actual program of color the syllables
+delete merge code, delete old imports
 
 Authors
 -------------------------------------------------------------------------------
